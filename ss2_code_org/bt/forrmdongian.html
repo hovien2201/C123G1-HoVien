@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Biểu mẫu nhập liệu FORM</title>
+      <style>
+        form{
+          margin-top: 100px;
+          margin-left: 500px;
+          margin-right: 800px;
+        }
+        #heya {
+          text-align: center;
+         background-color: brown; color: aliceblue;
+        }
+        #heyaa {
+          background-color: skyblue; color: blue;
+        }
+        #hey {
+          margin-left: 40px;
+          /* text-align: center; */
+          color: blue;
+        }
+        #hey1 {
+          margin-left: 100px;
+        }
+        #hey2{
+          color: coral;
+        }
+      </style>
+  </head>
+  <body>
+    <form action="tao form don gian" method="post">
+      <fieldset >
+        <h1 id="heya">SỞ THÍCH CỦA BẠN</h1>
+        <div id="hey">
+          Họ và tên
+          <input type="text" name="Họ và tên"><br><br>
+          Email
+          <input type="text" name="Email" style="margin-left: 24px;"><br><br>
+          Sở thích
+          <div id="hey2">
+            <input type="checkbox" name="The thao" value="on" style="margin-left: 60px;">The thao
+            <input type="checkbox" name="Am nhac" value="on" >Am nhac
+            <input type="checkbox" name="Doc sach" value="on" >Doc sach<br>
+            <input type="checkbox" name="Luot web" value="on" style="margin-left: 60px;">Luot web
+            <input type="checkbox" name="Choi game" value="on" >Choi game
+            <input type="checkbox" name="Dien anh" value="on" >Dien anh<br>
+            <input type="checkbox" name="Du lich" value="on" style="margin-left: 60px;" >Du lich
+            </div>
+        </div>
+        <div id="hey1">
+          <input type="submit" name="submit" value="Gui thong tin" >
+          <input type="submit" name="submit" value="Nhap lai">
+        </div>
+      </fieldset>
+    </form>
+    <form>
+      <fieldset style="background-color: wheat;">
+        <h1 id="heyaa">ĐĂNG KÍ HỌC VIÊN</h1>
+        <div>
+          Họ và tên
+          <input type="text" name="Họ và tên"><br><br>
+          Ngày sinh
+          <input type="text" name="Email" ><br><br>
+          Giới tính
+          <input type="radio" role="radio" value>Nam
+          <input type="radio" role="radio" value>Nu<br><br>
+          Địa chỉ
+          <input type="text" name="Địa chỉ" style="margin-left: 14px;"><br><br>
+          Lớp
+          <select name="dropdown" style="margin-left: 20px;">
+            <option value="-chon lop-" selected>-chon lop-</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select><br><br>
+          Email
+          <input type="text" name="Email" style="margin-left: 24px;"><br><br>
+          Điện Thoại
+          <input type="text" name="Điện Thoại"><br><br>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

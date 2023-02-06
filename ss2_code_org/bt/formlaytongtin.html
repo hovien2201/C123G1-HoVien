@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form lấy thông tin</title>
+    <style>
+            table, th, td{
+    border:1px solid black;
+}
+table{
+    border-collapse:collapse;
+}
+    </style>
+</head>
+<body>
+    <h1>Market Research Survey</h1>
+    <div>Please take a few moments to complete this satisfaction survey.</div>
+    <ul>
+        <li>
+            <label>What is your age range?</label>
+            <div>
+                <select onchange="handleInput(this);" onkeyup="handleInput(this);" tabindex="0" data-wufoo-field="dropdown">
+                   <option value="18-24">18-24</option>
+                   <option value="25-34">25-34</option>
+                   <option value="35-50">35-50</option>
+                   <option value="50+">50+</option>
+                </select>
+            </div>
+        </li><br>
+        <li>
+            <label>What is your yearly income range?</label>
+            <div>
+                <select onchange="handleInput(this);" onkeyup="handleInput(this);" tabindex="0" data-wufoo-field="dropdown" >
+                    <option value="$0-$25,000">$0-$25,000</option>
+                    <option value="$25,001-$50,000">$25,001-$50,000</option>
+                    <option value="$50,001-$100,000">$50,001-$100,000</option>
+                    <option value="$100,000+">50+</option>
+                </select>
+            </div>
+        </li><br>
+        <li>
+            <fieldset>
+                <div>
+                    <legend>Gender Indentity</legend>
+                    <div>
+                        <input name="Field505" type="hidden" value>
+                        <span>
+                            <input id="Field505_0" name="Field505" type="radio" value="Male" tabindex="0" onchange="handleInput(this);handleRadioOther(this.name, false);" onmouseup="handleInput(this);">
+                            <label for="Field505_0">
+                                <span>Male</span>
+                                <span> </span>
+                            </label>
+                        </span><br>
+                        <span>
+                            <input id="Field505_1" name="Field505" type="radio" value="Famale" tabindex="0" onchange="handleInput(this);handleRadioOther(this.name, false);" onmouseup="handleInput(this);"> 
+                            <label for="Field505_1">
+                                <span>Famale</span>
+                                <span> </span>
+                            </label>
+                        </span><br>
+                        <span>
+                            <input id="Field505_2" name="Field505" type="radio" value="Nonbinary" tabindex="0" onchange="handleInput(this);handleRadioOther(this.name, false);" onmouseup="handleInput(this);">
+                            <label for="Field505_2">
+                                <span>Nonbinary</span>
+                                <span> </span>
+                            </label>
+                        </span><br>
+                        <span>
+                            <input id="Field505_3" name="Field505" type="radio" value="Nonbinary" tabindex="0" onchange="handleInput(this);handleRadioOther(this.name, false);" onmouseup="handleInput(this);">
+                            <label for="Field505_3">
+                                <span>Other</span>
+                                <span> </span>
+                            </label>
+                        </span><br>
+                    </div>
+                </div>
+            </fieldset>
+        </li><br>
+        <li>
+            Which of the following products have your purchased in the last 2 months. Please check all that apply. 
+            <div>
+                <span>
+                    <input id="Field303" name="Field303" type="checkbox" value="Froduct 1" tabindex="0" onchange="handleInput(this);">
+                    <label for="Field303">
+                        <span>Product 1</span>
+                        <span> </span>
+                    </label>
+                </span><br>
+                <span>
+                    <input id="Field303" name="Field303" type="checkbox" value="Froduct 2" tabindex="0" onchange="handleInput(this);">
+                    <label for="Field303">
+                        <span>Product 2</span>
+                        <span> </span>
+                    </label>
+                </span><br>
+                <span>
+                    <input id="Field303" name="Field303" type="checkbox" value="Froduct 3" tabindex="0" onchange="handleInput(this);">
+                    <label for="Field303">
+                        <span>Product 3</span>
+                        <span> </span>
+                    </label>
+                </span>
+            </div>
+        </li><br>
+        <li>
+            How often would you use our new product?
+            <div>
+                <input name="Field808" type="hidden" value>
+                <span>
+                    <input name="Field808" type="radio" value="Daily" tabindex="0" onchange="handleInput(this);" onmouseup="handleInput(this);">
+                    <label>
+                        <span>Daily</span>
+                        <span> </span>
+                    </label>
+                </span><br>
+                <span>
+                    <input name="Field808" type="radio" value="Weekly" tabindex="0" onchange="handleInput(this);" onmouseup="handleInput(this);">
+                    <label>
+                        <span>Weekly</span>
+                        <span> </span>
+                    </label><br>
+                    <span>
+                        <input name="Field808" type="radio" value="Monthly" tabindex="0" onchange="handleInput(this);" onmouseup="handleInput(this);">
+                        <label>
+                            <span>Monthly</span>
+                            <span> </span>
+                        </label>
+                    </span>
+                </span>
+            </div>
+        </li><br>
+        <li>
+            What would you pay for the new product.<br>
+            <span>
+                <input name="Field807" type="text" value size="10" tabindex="0" onkeyup="handleInput(this);" onchange="handleInput(this);">
+                <label>Dollars</label>
+            </span>
+            <span>.</span>
+            <span>
+                <input name="Field807-1" type="text" value size="2" maxlength="2" tabindex="0" onkeyup="handleInput(this);" onchange="handleInput(this);">
+                <label>Cents</label>
+            </span>
+        </li><br>
+        <li>
+            <label>What features would you like to see in the new product.</label>
+            <div>
+                <textarea name="Field806" spellcheck="true" rows="10" cols="50" tabindex="0" onkeyup="handleInput(this); validateRange(806, 'charater')" onchange="handleInput(this);" placeholder></textarea>
+            </div>
+        </li><br>
+        <li>
+            What features would you like to see in the new product.
+            <table >
+                <thead>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>Strongly Disagree</td>
+                        <td>Disagree</td>
+                        <td>Agree</td>
+                        <td>Disagree Agree</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr role="radiogroup">
+                        <th>
+                            <label>Our product are priced fairly</label>
+                        </th>
+                        <td title="Strongly Disagree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false"  value="Strongly Disagree"><br>
+                            <label>1</label>
+                        </td>
+                        <td title="Disagree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false" value="Disagree" >
+                            <label>2</label>
+                        </td>
+                        <td title="Agree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false" value="Agree" >
+                            <label>3</label>
+                        </td>
+                        <td title="Strongly Agree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false" value="Strongly Agree" >
+                            <label>4</label>
+                        </td>
+                    </tr>
+                    <tr role="radiogroup">
+                        <th>
+                            <label>Our products are high quality.</label>
+                        </th>
+                        <td title="Strongly Disagree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false"  value="Strongly Disagree"><br>
+                            <label>1</label>
+                        </td>
+                        <td title="Disagree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false" value="Disagree" >
+                            <label>2</label>
+                        </td>
+                        <td title="Agree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false" value="Agree" >
+                            <label>3</label>
+                        </td>
+                        <td title="Strongly Agree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false" value="Strongly Agree" >
+                            <label>4</label>
+                    </tr>
+                    <tr role="radiogroup">
+                        <th>
+                            <label>You would recommend our product to are friend or coworker.</label>
+                        </th>
+                        <td title="Strongly Disagree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false"  value="Strongly Disagree" ><br>
+                            <label>1</label>
+                        </td>
+                        <td title="Disagree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false" value="Disagree" >
+                            <label>2</label>
+                        </td>
+                        <td title="Agree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false" value="Agree" >
+                            <label>3</label>
+                        </td>
+                        <td title="Strongly Agree">
+                            <input name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false" value="Strongly Agree">
+                            <label>4</label>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>
+            <input name="saveForm" type="submit" value="submit" onmousedown="doSubmitEvents();">
+        </li>
+    </ul>
+</body>
+</html>
