@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung quy doi tien te</title>
+</head>
+<body>
+   <table>
+    <tbody>
+        <tr>
+            <th>
+                <label for="Amount">Amount</label>
+            </th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <th>
+                <input type="text" id="Amount">
+            </th>
+            <th>
+                <select id="From">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </th>
+            <th>
+                <select id="To">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </th>
+            <td>
+                <button onclick="ChangeMoney()">Convert</button>
+            </td>
+        </tr>
+    </tbody>
+   </table><br>
+   <h1 id="Result"></h1>
+</body>
+<script src="chuyendoitiente.js"> 
+</script>
+</html>
