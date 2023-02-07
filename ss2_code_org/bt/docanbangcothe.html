@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do can bang cua ban</title>
+</head>
+<body>
+    <h1>Tinh do can bang cua ban <img src='https://phunugioi.com/wp-content/uploads/2020/11/tai-hinh-anh-dong-de-thuong.gif' width='200' height='200'></h1>
+    <label for="can_nang">Nhap can nang(kg):</label>
+    <input type="text" id="can_nang"><br><br>
+    <label for="chieu_cao">Nhap chieu cao(m):</label>
+    <input type="text" id="chieu_cao"><br><br>
+    <button onclick="kiem_tra()">Kiem tra</button>
+    <p id="result"></p>
+</body>
+</html>
+<script>
+function kiem_tra() {
+    let can_nang = document.getElementById("can_nang").value;
+    let chieu_cao = document.getElementById("chieu_cao").value;
+    let bmi = can_nang / ( Math.pow(chieu_cao, 2) )
+    let result = "";
+    
+    if (bmi < 16) 
+        result = "Gầy độ 3. Ăn thật nhiều vào nhé" + "<img src = 'https://i.pinimg.com/originals/3b/97/63/3b97635b6bd4a5bfc436fbd3908f05e0.gif' width='100' height= '100'>";
+    else if (bmi < 17)
+        result = "Gầy độ 2" + "<img src = 'https://img2.thuthuatphanmem.vn/uploads/2018/12/31/nhung-hinh-dong-de-thuong-nhat_112056213.gif' width='100' height= '100'>";
+    else if (bmi < 18.5)
+        result = "Gầy độ 1" + "<img src = 'https://upanh123.com/wp-content/uploads/2021/05/hinh-anh-dong-hoat-hinh1.gif' width='100' height= '100'>";
+    else if (bmi < 25)
+        result = "Bình thường" + "<img src = 'https://i.pinimg.com/originals/b0/06/7a/b0067ade5e832d2aefec8ee9bda50fdc.gif' width='100' height= '100'>";
+    else if (bmi < 30)
+        result = "Thừa cân" + "<img src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnbdajd7I3ZLpql6Ekhh6T4diwopCXcahys7mWWBRJqo-FvLgtNiNEp8PDvbdPXaJzcto&usqp=CAU' width='100' height= '100'>";
+    else if (bmi < 35)
+        result = "Béo phì độ 1" + "<img src = 'https://upanh123.com/wp-content/uploads/2021/05/hinh-anh-dong-hoat-hinh2.gif' width='100' height= '100'>";
+    else if (bmi < 40)
+        result = "Béo phì độ 2" + "<img src = 'https://upanh123.com/wp-content/uploads/2021/05/hinh-anh-dong-hoat-hinh9.gif' width='100' height= '100'>";
+    else
+        result = "Béo phì độ 3" + "<img src = 'https://i.pinimg.com/originals/73/4d/11/734d11cc677595ce3c3e5e3bba02721f.gif' width='100' height= '100'>"
+
+    document.getElementById("result").innerHTML = "Chỉ số BMI là: " + bmi + ". Bạn " + "<b>"+ result + "</b>";
+}
+</script>
