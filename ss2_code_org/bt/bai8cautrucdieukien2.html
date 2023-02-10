@@ -7,10 +7,10 @@
 <body>
     <script>
         let tuoi= prompt("nhap kiem tra phai tuoi khong")
-        let check=Number.isInteger(tuoi)
+        // let check=Number.isInteger()
         if (tuoi<=120){
             if(tuoi>0){
-                if (check=true){
+                if (tuoi%1==0){
                     document.write("day la tuoi cua mot nguoi") }
                 else{
                     document.write("day khong phai la tuoi cua mot nguoi")}

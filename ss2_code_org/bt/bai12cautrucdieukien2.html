@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lai suat ngan hang</title>
+</head>
+<body>
+    <script>
+        let tien_gui= +prompt("so tien ban vay ngan hang la(trieudong): ")
+        let so_thang= +prompt("so thang ban vay la: ")
+        let lai_thang= +prompt("lai suat hang thang ngan hang quy dinh la:")
+        let lai_suat= tien_gui* Math.pow((1+lai_thang),so_thang)
+        document.write("lai suat ban phai tra khi vay "+tien_gui+"trieu trong " +so_thang+" thang la:"+(lai_suat - tien_gui))
+    </script>
+</body>
+</html>
