@@ -6,37 +6,38 @@
 </head>
 <body>
     <script>
-        let a= prompt("nhap a")
-        let b= prompt("nhap b")
-        let c= prompt("nhap c")
-        let delta
-        let x1
-        let x2
-        let x
+        let a= prompt("nhap a");
+        let b= prompt("nhap b");
+        let c= prompt("nhap c");
+        let delta;
+        let x1;
+        let x2;
+        let x;
         if(a==0){
             if(b==0){
                 if (c==0){
-                document.write("phuong trinh vo so nghiem")}
+                document.write("phuong trinh vo so nghiem");}
                 else{
-                    document.write("phuong trinh vo nghiem")
+                    document.write("phuong trinh vo nghiem");
                 }
             }else{
                 x=-c/b
-                document.write("phuong trinh co nghiem la x:"+ x)
+                document.write("phuong trinh co nghiem la x:"+ x);
             }
         }else{
             delta=b*b-4*a*c
             if(delta<0){
-                document.write("phuong trinh vo nghiem") }
-            if(delta==0){
+                document.write("phuong trinh vo nghiem");}
+            else {if(delta==0){
                 let x=-b/(2*a)
-                document.write("phuong trinh co nghiem kep la: x1=x2="+ x) }
+                document.write("phuong trinh co nghiem kep la: x1=x2="+ x); }
             else{
-                x1=(-b+Math.sqrt(delta))/(a*2)
-                x2=(-b-Math.sqrt(delta))/(a*2)
-                document.write("phuong trinh co 2 nghiem la: x1="+x1+" x2="+x2)
+                x1=((-b)+Math.sqrt(delta))/(a*2);
+                x2=((-b)-Math.sqrt(delta))/(a*2);
+                document.write("phuong trinh co 2 nghiem la: x1="+x1+" x2="+x2);
             }
         }
+    }
     </script>
 </body>
 </html>

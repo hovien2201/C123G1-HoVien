@@ -6,37 +6,36 @@
 </head>
 <body>
     <script>
-        let TN= +prompt("thu nhap cua ban(trieu):")
-        let Thue
+        let thunhap= +prompt("thu nhap cua ban(trieu):");
+        let thue ;
         switch (true) {
-            case TN<=5:
-                Thue=TN*0.05
-                document.write("thue ban phai tra la:"+ Thue +"TRIEU VND")
+            case thunhap<=5:
+                thue=thunhap*0.05
+                document.write("thue ban phai tra la:"+ thue+"TRIEU VND");
                 break;
-            case TN<=10:
-                Thue=TN*0.1-0.25
-                document.write("thue ban phai tra la:"+ Thue +"TRIEU VND")
+            case thunhap<=10:
+                thue=thunhap*0.1-0.25
+                document.write("thue ban phai tra la:"+ thue +"TRIEU VND");
                 break;
-            case TN<=18:
-                Thue=TN*0.15-0.75
-                document.write("thue ban phai tra la:"+ Thue +"TRIEU VND")
+            case thunhap<=18:
+                thue=thunhap*0.15-0.75
+                document.write("thue ban phai tra la:"+ thue +"TRIEU VND");
                 break;
-            case TN<=32:
-                Thue=TN*0.2-1.65
-                document.write("thue ban phai tra la:"+ Thue +"TRIEU VND")
+            case thunhap<=32:
+                thue=thunhap*0.2-1.65
+                document.write("thue ban phai tra la:"+ thue +"TRIEU VND");
                 break;
-            case TN<=52:
-                Thue=TN*0.25-3.25
-                document.write("thue ban phai tra la:"+ Thue +"TRIEU VND")
+            case thunhap<=52:
+                thue=thunhap*0.25-3.25
+                document.write("thue ban phai tra la:"+ thue +"TRIEU VND");
                 break;
-            case TN<=80:
-                Thue=TN*0.3-5.85
-                document.write("thue ban phai tra la:"+ Thue +"TRIEU VND")
+            case thunhap<=80:
+                thue=thunhap*0.3-5.85
+                document.write("thue ban phai tra la:"+ thue +"TRIEU VND");
                 break;
             default:
-                Thue=TN*0.35-9.85
-                document.write("thue ban phai tra la:"+ Thue +"TRIEU VND")
-                break;
+                thue=thunhap*0.35-9.85
+                document.write("thue ban phai tra la:"+ thue +"TRIEU VND");
         }
     </script>
 </body>

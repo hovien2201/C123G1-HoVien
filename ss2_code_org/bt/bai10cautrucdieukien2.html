@@ -6,32 +6,32 @@
 </head>
 <body>
     <script>
-        let LDNTT= prompt("nhap doanh dien nang tieu thu(kWh)")
-        let TD
-        switch (LDNTT) {
-            case LDNTT<50:
-                TD=LDNTT*1.678
-                document.write("Tien dien la:"+ TD +"NGHIN VND")
+        let dienNangTieuThu= prompt("nhap doanh dien nang tieu thu(kWh)")
+        let tiendien
+        switch (dienNangTieuThu) {
+            case dienNangTieuThu<50:
+                tiendien=dienNangTieuThu*1.678
+                document.write("Tien dien la:"+ tiendien +"NGHIN VND")
                 break;
-            case LDNTT<100:
-                TD=LDNTT*1.734
-                document.write("Tien dien la:"+ TD +"NGHIN VND")
+            case dienNangTieuThu<100:
+                tiendien=dienNangTieuThu*1.734
+                document.write("Tien dien la:"+ tiendien +"NGHIN VND")
                 break;
-            case LDNTT<200:
-                TD=LDNTT*2.014
-                document.write("Tien dien la:"+ TD +"NGHIN VND")
+            case dienNangTieuThu<200:
+                tiendien=dienNangTieuThu*2.014
+                document.write("Tien dien la:"+ tiendien +"NGHIN VND")
                 break;
-            case LDNTT<300:
-                TD=LDNTT*2.536
-                document.write("Tien dien la:"+ TD +"NGHIN VND")
+            case dienNangTieuThu<300:
+                tiendien=dienNangTieuThu*2.536
+                document.write("Tien dien la:"+ tiendien +"NGHIN VND")
                 break;
-            case LDNTT<400:
-                TD=LDNTT*2.834
-                document.write("Tien dien la:"+ TD +"NGHIN VND")
+            case dienNangTieuThu<400:
+                tiendien=dienNangTieuThu*2.834
+                document.write("Tien dien la:"+ tiendien +"NGHIN VND")
                 break;
             default:
-                TD=LDNTT*2.927
-                document.write("Tien dien la:"+ TD +"NGHIN VND")
+                tiendien=dienNangTieuThu*2.927
+                document.write("Tien dien la:"+ tiendien +"NGHIN VND")
                 break;
         }
         // if (LDNTT<50) {
