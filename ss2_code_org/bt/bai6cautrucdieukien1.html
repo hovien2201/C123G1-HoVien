@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let doanhso = prompt("nhap doanh so")
+        let hoahong
+        if (doanhso<3000000) {
+            hoahong=doanhso*0.1
+            document.write("hoa hong la:"+ hoahong)
+        }else{
+            if(doanhso<5000000){
+            hoahong=doanhso*0.2
+            document.write("hoa hong la:"+ hoahong)
+            }else{
+                if(doanhso<8000000){
+                    hoahong=doanhso*0.3
+                    document.write("hoa hong la:"+ hoahong)
+                }else{
+                    hoahong=doanhso*0.4
+                    document.write("hoa hong la:"+ hoahong)
+                }
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

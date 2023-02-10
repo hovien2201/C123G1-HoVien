@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nang kuc hoc sinh</title>
+</head>
+<body>
+    <script>
+        let a= +prompt("hay nhap diem kiem tra")
+        let b= +prompt("hay nhap diem giua ki")
+        let c= +prompt("hay nhap diem cuoi ki")
+        let dtb = (a + b*2 + c*3)/6;
+        if (dtb > 8){
+            document.write("HS Gioi")}
+        else{ 
+            if (dtb >6.5){
+                document.write("HS kha")}
+            else{
+                if (dtb > 5){
+                    document.write("HS trung binh")}
+                else{
+                    if (dtb >3.5){
+                        document.write("HS YEU")}
+                    else {
+                        document.write("HS kem")}
+                }
+            }
+        }
+        document.write(dtb)
+    </script>
+</body>
+</html>
