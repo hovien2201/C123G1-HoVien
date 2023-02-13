@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+    <script>
+let n1 = 0;
+let n2 = 1;
+let nextTerm;
+let sum=0;
+document.write("tomg 20 so Fibonacci dau tien la:");
+
+for (let i = 1; i <= 20; i++) {
+    sum=sum+n1;
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+}
+document.write(sum);
+    </script>
+</body>
+</html>

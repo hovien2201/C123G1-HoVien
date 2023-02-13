@@ -5,10 +5,52 @@
     <title>In cac so nguyen to</title>
 </head>
 <body>
-    <script>
-        let soluong= prompt("nhap so luong so nguyen to ban can in");
-        let i=0 ;
+    <!-- <script>
+        let n= prompt("nhap so luong so nguyen to ban can in");
+        let i ;
+        let cout=0;
+        let coutSNT=0;
+        for (i=2; i<10000000; i++){
+            if(coutSNT < n){
+            for(j = 1; j < i; j++){
+                if(i % j == 0){
+                    cout=cout+1 ;
+                }
+            }
+                if (cout==2){
+                    document.write(i);
+                    coutSNT=coutSNT+1;
+                }
+                cout=0;
+            } else {
+                break;
+            }
+          }
         
+    </script> -->
+    <script>
+        function checkNT(number) {
+            let count = 0;  
+            let countSNT = 0; ;
+            for (let i = 2; i < 1000; i++) { 
+                if (countSNT < number) {
+                    for (let j = 1; j <= i; j++) {
+                        if (i % j == 0) {
+                            count += 1;
+                        }
+                    }
+                    if (count == 2) {
+                        document.write(i + "<br>"); 
+                        countSNT += 1; 
+                    }
+                    count = 0;
+                } else {
+                    break;
+                }
+            }
+        }
+        let number = parseInt(prompt("Nhập n số nguyên tố đầu tiên: ")); 
+        checkNT(number);
     </script>
 </body>
 </html>
