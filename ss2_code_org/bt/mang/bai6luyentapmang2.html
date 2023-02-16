@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+    <script>
+        let a=prompt("nhap do di nha");
+        let arr=[];
+        for (let i=0;i<a.length;i++){
+            if(a[i]==="-"){
+                arr.push("_")
+            }
+            else{
+                arr.push(a[i]);
+            }
+        }
+        alert(arr.join(""));
+    </script>
+</body>
+</html>
