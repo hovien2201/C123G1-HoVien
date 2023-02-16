@@ -15,18 +15,16 @@
 
 
     <script>
-        let arr=[1,42,54,6,5,8,123,52,99,60];
-        for(let n=0;n<10;n++){
+        let arr=[1,-42,54,6,5,8,123,55,99,60];
             for (let j=0; j< 10; j++){
                 for(let i=j+1;i<10;i++){
                     if(arr[i]>arr[j]){
                         let num=arr[j];
                         arr[j]= arr[i];
                         arr[i]= num;
+                    }
                 }
             }
-        }
-        }
         document.write("mang da sap xep la: " + arr );   
     </script>
 </body>
