@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+    <script>
+        function countVowel(str) { 
+            let count = str.match(/[aeiou]/gi).length;
+            return count;
+        }
+        let string = prompt('Enter a string: ');
+        let result = countVowel(string);
+        console.log("so luong so nguyen am la: "+ result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <label for="string">Nhap tu tim kiem:</label>
+    <input type="text" name="" id="string" placeholder="nhap tu de dic">
+    <button onclick="transcript()">dich ra:</button>
+    <p id="result"></p>
+    <script>
+        function transcript() {
+            let eng=["hello","yes","no","what","love","like","hate","you","i"];
+            let vie=["xin chào","đúng","không","cái gì","yêu","thích","ghét","bạn","tôi"];
+            let string= document.getElementById("string").value ;
+            let result="";
+            let indexEng= 0;
+            for (let i = 0; i < eng.length; i++) {
+                if (string == eng[i]) {
+                    indexEng = i; 
+                    for (let j = 0; j < vie.length; j++) {
+                        if (indexEng == j) { 
+                            result = vie[j];  
+                        }
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

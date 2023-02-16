@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6</title>
+</head>
+<body>
+    <script>
+        let arr=[1,4,7,3,8,1,23,9,11,23];
+        let v= prompt("nhap so de kiem tra");
+        let n=0
+        for (let i=0; i<arr.length;i++){
+            if (v == arr[i] ) {
+                alert("v is in the array");
+                n=2;
+                break;
+            }
+        }if(n==0){
+            alert("v is not in the array");
+        }
+    </script>
+</body>
+</html>
