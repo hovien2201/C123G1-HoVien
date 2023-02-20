@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countFrom(){
+            let arr=["a,d,a,v,a,f,s,w,b,a"];
+            let chuoi = arr.join(",");
+            let kytu=prompt("nhap vao ky tu bat ki de kiem tra");
+            let dem=0;
+            for(let i=0;i<chuoi.length;i++){
+                if(kytu === chuoi[i]){
+                    dem++;
+                }
+            }
+            if(dem==0){
+                document.write("-1");
+                return;
+            }
+            document.write("so tu " + kytu+ " co trong mang la: "+ dem);
+            return(sum);
+        }
+        countFrom();
+    </script>
+</body>
+</html>

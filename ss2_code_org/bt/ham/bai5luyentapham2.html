@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function returnNumber(){
+            let a = prompt("nhap a");
+            let b = prompt("nhap b");
+            let c = prompt("nhap c");
+            if (a==b && b==c){
+                document.write("ba so bang nhau");
+                return;
+            }
+            else{
+                if(a==b && a<c){
+                    document.write("a va b la so nho nhat: "+a);
+                    return;
+                }
+                else{
+                    if(b==c && b<a){
+                        document.write("b va c la so nho nhat: "+ b);
+                        return;
+                    }
+                }
+            }
+            if (a<b && a<c){
+                document.write("a la so nho nhat: "+ a);
+            }
+            else{
+                if (b<c){
+                    document.write("b la so nho nhat: "+ b);
+                }
+                else{
+                    document.write("c la so nho nhat: "+c);
+                }
+            }
+            return;
+        }
+        returnNumber();
+    </script>
+</body>
+</html>

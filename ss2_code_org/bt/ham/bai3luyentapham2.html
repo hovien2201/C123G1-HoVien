@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function factorial() {
+            let num = prompt("Nhập vào 1 số bất kì để tính ra giai thừa của số đó");
+            let giaithua= 1;
+            for (let i = 1; i <= num; i++) {
+                giaithua *= i;
+            }
+            document.write(giaithua);
+        }
+        factorial();
+    </script>
+</body>
+</html>
