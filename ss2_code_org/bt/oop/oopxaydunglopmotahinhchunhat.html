@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="Canvas" width="1000" height="300"></canvas>
+    <script>
+        class Rectangle {
+            constructor(width,height){                
+                this.width= width;
+                this.height =height;
+            }
+            getHight (){
+                return this.height;
+            }
+            setHight (height){
+                this.height = height;
+            }
+            getWidth (){
+                return this.width;
+            }
+            setWidth (width){
+                this.width = width;
+            }
+            getChuVi (){
+                return (this.height + this.width)*2;
+            }
+            getDienTich (){
+                return this.height * this.width;
+            }
+        }
+        let myRectangle = new Rectangle(300,150);
+        let width =myRectangle.getWidth();
+        let height =myRectangle.getHight();
+        myRectangle.setWidth(500);
+        myRectangle.getWidth();
+        myRectangle.setHight(200);
+        myRectangle.getHight();
+        document.write("<br>");
+        document.write("chuvi: "+ myRectangle.getChuVi()+"<br>");
+        document.write("dientich: "+ myRectangle.getDienTich()+"<br>");
+        let canvas= document.getElementById("Canvas");
+        if (canvas.getContext) 
+        {
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle='#fa4b2a';    
+            ctx.fillRect(20, 20, 500, 200);  
+        }
+    </script>
+</body>
+</html>
