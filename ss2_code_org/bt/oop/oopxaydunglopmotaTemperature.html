@@ -25,7 +25,7 @@
         }
         let doC= +prompt("nhap nhiet do");
         if(doC<-273){
-            doC=prompt("nhiet do qua thap moi nhap lai");
+            doC=+prompt("nhiet do qua thap moi nhap lai");
         }
         let myTemperature = new Temperature(doC);
         document.write("do F la: "+myTemperature.getDoF() +"<br>");
