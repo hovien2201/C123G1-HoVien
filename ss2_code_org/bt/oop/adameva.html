@@ -7,30 +7,14 @@
 <body>
     <script>
         class Apple{
-            constructor(weight){
-                this.weight =weight;
+            constructor(){
+                this.weight =10;  //k doi
             }
             getWeight() {
                 return this.weight;
             }
-            setWeight(weight){
-                this.weight=weight;
-            }
-            isSs (){
-                if(this.weight<= 0){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
-            decrease(){
-                if(this.isSs()){
-                    document.write("tao da het");
-                }
-                else{
-                    this.weight--;
-                }
+            decrease(){               
+                this.weight--;              
             }
         }
 
@@ -41,59 +25,44 @@
                 this.gender=gender;
                 this.weight=weight;
             }
-            getName(){
-                return this.name;
-            }
-            setName(name){
-                this.name=name;
-            }
-            getGender(){
-                return this.gender;
-            }
-            setGender(gender){
-                this.gender=gender;
-            }
-            getWeight(){
-                return this.weight;
-            }
-            say(string){
-                console.log(string);
+            
+            say(text){
+                document.write(text);
             }
             check(apple){
-                return apple.isSs();
+                return apple.getWeight()>0;
             }
             eat(apple){
-                if(apple.getWeight() > 0){
-                    apple.decrease();
-                    this.weight++;
-                }
-                else{
-                    alert("het tao");
+                if(this.check(apple)){
+                this.weight++;
+                apple.decrease();
                 }
             }
-            getInfo(human){
-                alert(human.name + " " +human.weight + " " +human.getGender());
-            }
+            
         }
         
         let adam = new Human("adam","nam", 60);
         let eva = new Human("eva", "nu", 45);
-        let apple_1 = new Apple(10);
-        adam.say("I'am adam"+"<br>");
-        eva.say("I'am eva"+"<br>");
-        while(apple_1.isSs() !== true){
-            document.write("adam an tao"+"<br>");
+        let apple_1 = new Apple();
+        // while(apple_1.weight<=0){                em thu hoai sao k dc cach nay huhu
+        // for(let i=0;i<5;i++){
+        // while(apple_1.getWeight()<=0){
+        let n=0;
+        while(n<1000){           
             adam.eat(apple_1);
-            document.write("qua tao con la:" +"<br>");
-            document.write(apple_1.getWeight() +"dv"+"<br>");
-            document.write("can nang cua adam la"+eva.getWeight()+"dv" +"<br>");
-            document.write("<br>")   
-            document.write("eva an tao" + "<br>");
+            adam.say("adam an tao"+"<br>");
+            document.write("can nang adam: "+adam.weight+"<br>");
+            document.write("can nang qua tao: "+apple_1.weight+"<br>");
             eva.eat(apple_1);
-            document.write("qua tao con la: "+"dv" + "<br>");
-            document.write(apple_1.getWeight()+"dv" + "<br>");
-            document.write( "can nang la: " + eva.getWeight()+"dv" + "<br>");
-        }
+            eva.say("eva an tao"+"<br>");
+            document.write("can nang eva: "+eva.weight+"<br>"); 
+            document.write("can nang qua tao: "+apple_1.weight+"<br>");
+            document.write("<br>");
+            if(apple_1.weight==0){
+                n=1000;
+            }
+            n++
+        }           
     </script>
 </body>
 </html>
