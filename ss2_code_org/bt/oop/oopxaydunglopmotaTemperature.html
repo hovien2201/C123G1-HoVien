@@ -8,6 +8,9 @@
     <script>
         class Temperature {            
             constructor(doC){
+                while(doC<-273){
+                doC=+prompt("nhiet do qua thap moi nhap lai");
+            }
                 this.doC= doC;
             }
             getDoC(){
@@ -24,12 +27,9 @@
             }
         }
         let doC= +prompt("nhap nhiet do");
-        if(doC<-273){
-            doC=+prompt("nhiet do qua thap moi nhap lai");
-        }
         let myTemperature = new Temperature(doC);
         document.write("do F la: "+myTemperature.getDoF() +"<br>");
-        document.write("do kevin la: "+myTemperature.getDoKevin());
+        document.write("do kevin la: "+myTemperature.getDoKevin());  
     </script>
 </body>
 </html>

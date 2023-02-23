@@ -8,12 +8,13 @@
     <style>
         table tr td {
             border: 1px blue solid;
-            font-size: 100px;
+            font-size: 20px;
         }
     </style>
     <h1>DANH SACH SAN PHAM</h1>
     <input id="newProducts" placeholder="san pham moi">
     <button type="button" onclick="creatProducts()">creat</button>
+    <p id="sumofProducts"></p>
     <table>
         <tr>
             <td>Ten san pham</td>
@@ -43,11 +44,12 @@
             for(let i=0;i<productsList.length;i++){
                 conten += "<tr>"+
                 "<td>"+productsList[i]+"</td>"+
-                "<td >Sửa</td>"+
-                "<td  onclick='deleteProducts("+i+")'>Xóa</td>"+
+                "<td ><button onclick='editProducts("+i+")'>sua</button></td>"+
+                "<td> <button onclick='deleteProducts("+i+")'>Xóa</button></td>"+
             "</tr>"
             }
             document.getElementById("products").innerHTML = conten;
+            document.getElementById("sumofProducts").innerHTML = productsList.length +" san pham";
         }
         showProducts();
         // them
@@ -55,13 +57,21 @@
             let newP = document.getElementById("newProducts").value;
             productsList.push(newP);
             showProducts();
+            document.getElementById("newProducst").value ="";
         }
         // xoa
         function deleteProducts(index){
+            if(confirm("ban mon xoa khong")){
             productsList.splice(index,1);
             showProducts();
+            }
         }
         //sua 
+        function editProducts(index){
+            let newValue =prompt("nhap san pham sua:", productsList[index]);
+            productsList[index]= newValue;
+            showProducts();
+        }
     </script>
 </body>
 </html>
