@@ -30,6 +30,12 @@
             getDienTich (){
                 return this.height * this.width;
             }
+            canvas(){
+                let canvas= document.getElementById("Canvas");
+                var ctx = canvas.getContext('2d');
+                ctx.fillStyle='#fa4b2a';    
+                ctx.fillRect(20, 20, 500, 200); 
+            }
         }
         let myRectangle = new Rectangle(300,150);
         let width =myRectangle.getWidth();
@@ -41,13 +47,14 @@
         document.write("<br>");
         document.write("chuvi: "+ myRectangle.getChuVi()+"<br>");
         document.write("dientich: "+ myRectangle.getDienTich()+"<br>");
-        let canvas= document.getElementById("Canvas");
-        if (canvas.getContext) 
-        {
-            var ctx = canvas.getContext('2d');
-            ctx.fillStyle='#fa4b2a';    
-            ctx.fillRect(20, 20, 500, 200);  
-        }
+        myRectangle.canvas();
+        // let canvas= document.getElementById("Canvas");
+        // if (canvas.getContext) 
+        // {
+        //     var ctx = canvas.getContext('2d');
+        //     ctx.fillStyle='#fa4b2a';    
+        //     ctx.fillRect(20, 20, 500, 200);  
+        // }
     </script>
 </body>
 </html>
