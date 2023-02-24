@@ -22,20 +22,8 @@
             <td>Xóa</td>
         </tr>
         <tbody id="products">
-            <tr>
-                <td>iphone</td>
-                <td>sua</td>
-                <td>xoa</td>
-            </tr>
-            <tr>
-                <td>sony</td>
-                <td>sua</td>
-                <td>xoa</td>
-            </tr>
         </tbody>
     </table>
-
-
     <script>
         // hien thi
         let productsList=["sony","oppo","iphone"];
@@ -62,8 +50,8 @@
         // xoa
         function deleteProducts(index){
             if(confirm("ban mon xoa khong")){
-            productsList.splice(index,1);
-            showProducts();
+                productsList.splice(index,1);
+                showProducts();
             }
         }
         //sua 

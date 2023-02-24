@@ -43,22 +43,20 @@
         
         let adam = new Human("adam","nam", 60);
         let eva = new Human("eva", "nu", 45);
-        let apple_1 = new Apple();
-        // while(apple_1.weight<=0){                em thu hoai sao k dc cach nay huhu
-        // for(let i=0;i<5;i++){
-        // while(apple_1.getWeight()<=0){
+        let apple1 = new Apple();
+        // while(apple1.weight<=0){                em thu hoai sao k dc cach nay huhu
         let n=0;
         while(n<1000){           
-            adam.eat(apple_1);
+            adam.eat(apple1);
             adam.say("adam an tao"+"<br>");
             document.write("can nang adam: "+adam.weight+"<br>");
-            document.write("can nang qua tao: "+apple_1.weight+"<br>");
-            eva.eat(apple_1);
+            document.write("can nang qua tao: "+apple1.weight+"<br>");
+            eva.eat(apple1);
             eva.say("eva an tao"+"<br>");
             document.write("can nang eva: "+eva.weight+"<br>"); 
-            document.write("can nang qua tao: "+apple_1.weight+"<br>");
+            document.write("can nang qua tao: "+apple1.weight+"<br>");
             document.write("<br>");
-            if(apple_1.weight==0){
+            if(apple1.weight==0){
                 n=1000;
             }
             n++
