@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = prompt('ki tu ban muon kiem tra: ');
+        let count = str.match(/[aeiou]/gi);
+        if (count == str) {
+            alert("ki tu ban nhap la nguyen am: " + count);
+        }
+        else {
+            alert("ki tu ban nhap khong phai nguyen am: " + str);
+        }
+    </script>
+</body>
+
+</html>

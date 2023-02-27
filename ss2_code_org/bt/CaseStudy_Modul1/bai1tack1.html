@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let luongNhan = +prompt("nhap luong ma nhan vien nhan dc(trieu dong): ");
+        let luongRong;
+        let thue;
+        document.write("luong nhan vien nhan la: " + luongNhan + "trieu VND" + "<br>");
+        if (luongNhan >= 15) {
+            thue = luongNhan * 0.2;
+            document.write("thue phai dong la:" + thue + "trieu VND" + "<br>");
+            luongRong = luongNhan - thue;
+            document.write("luong rong nhan vien nhan duoc la: " + luongRong + "trieu VND" + "<br>");
+        }
+        else {
+            if (luongNhan >= 7) {
+                thue = luongNhan * 0.1;
+                document.write("thue phai dong la:" + thue + "trieu VND" + "<br>");
+                luongRong = luongNhan - thue;
+                document.write("luong rong nhan vien nhan duoc la: " + luongRong + "trieu VND" + "<br>");
+            }
+            else {
+                thue = luongNhan * 0.05;
+                document.write("thue phai dong la:" + thue + "trieu VND" + "<br>");
+                luongRong = luongNhan - thue;
+                document.write("luong rong nhan vien nhan duoc la: " + luongRong + "trieu VND");
+            }
+        }
+    </script>
+</body>
+
+</html>

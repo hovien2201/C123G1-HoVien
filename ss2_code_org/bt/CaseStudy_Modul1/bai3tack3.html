@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function maxFraction() {
+            let arr = [5, 3, 5, 8, 10, 1];
+            let arr1 = [6, 3, 4, 3, 2, 3];
+            let n = 0;
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[n] * arr1[i] < arr[i] * arr1[n]) {
+                    n = i;
+                }
+            }
+            document.write(arr[n] + "/" + arr1[n] + " la phan so lon nhat, co chi so la:" + n);
+            return;
+        }
+        maxFraction();
+    </script>
+</body>
+
+</html>

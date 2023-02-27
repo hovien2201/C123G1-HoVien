@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let select;
+        let sum=0;
+        let soLuong;
+        let tongMon=0;
+        alert(`
+            1. Cafe (15k)
+            2. Nước vắt (20k)
+            3. Nước ép cà rốt (20k)
+            4. Nước ép cà chua (20k)
+            5. Nước lọc (5k)
+            6.Nước dừa (20k)
+            7.Đã chọn xong.
+        `);
+        do{
+            select=+prompt("nhap mon ban chon");
+            switch(select){
+                case 1:
+                    soLuong=+prompt("nhap so luong mon");
+                    sum=sum+15*soLuong;
+                    tongMon=tongMon+soLuong;
+                    alert("mon cua ban chon co gia 15k ban chon so luong la:"+soLuong+"<br>"+" tong tien ban da chon:"+sum+"k tong so luong mon da chon:"+tongMon);
+                    break;
+                case 2:
+                    soLuong=+prompt("nhap so luong mon");
+                    tongMon=tongMon+soLuong;
+                    sum=sum+20*soLuong;
+                    alert("mon cua ban chon co gia 20k ban chon so luong la:"+soLuong+" tong tien ban da chon:"+sum+"k tong so luong mon da chon:"+tongMon);
+                    break;
+                case 3:
+                    soLuong=+prompt("nhap so luong mon");
+                    tongMon=tongMon+soLuong;
+                    sum=sum+20*soLuong;
+                    alert("mon cua ban chon co gia 20k ban chon so luong la:"+soLuong+" tong tien ban da chon:"+sum+"k tong so luong mon da chon:"+tongMon);
+                    break;
+                case 4:
+                    soLuong=+prompt("nhap so luong mon");
+                    tongMon=tongMon+soLuong;
+                    sum=sum+20*soLuong;
+                    alert("mon cua ban chon co gia 20k ban chon so luong la:"+soLuong+" tong tien ban da chon:"+sum+"k tong so luong mon da chon:"+tongMon);
+                    break;
+                case 5:
+                    soLuong=+prompt("nhap so luong mon");
+                    tongMon=tongMon+soLuong;
+                    sum=sum+5*soLuong;
+                    alert("mon cua ban chon co gia 5k ban chon so luong la:"+soLuong+" tong tien ban da chon:"+sum+"k tong so luong mon da chon:"+tongMon);
+                    break;
+                case 6:
+                    soLuong=+prompt("nhap so luong mon");
+                    tongMon=tongMon+soLuong;
+                    sum=sum+20*soLuong;
+                    alert("mon cua ban chon co gia 20k ban chon so luong la:"+soLuong+" tong tien ban da chon:"+sum+"k tong so luong mon da chon:"+tongMon);
+                    break;
+                case 7:
+                    alert("ban da chon xong,  tong tien ban da chon:"+sum+"k tong so luong mon da chon:"+tongMon);
+                    break;
+            }
+        }
+        while(select!=7);
+    </script>
+</body>
+</html>
