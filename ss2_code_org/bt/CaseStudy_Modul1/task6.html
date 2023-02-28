@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Danh sách các học viên</h1>
+    <div id="tableStudentList"></div>
+    <script>
+        class Student {
+            constructor(codeStudent, nameStudent, classes, email, birth) {
+                this.codeStudent = codeStudent;
+                this.nameStudent = nameStudent;
+                this.classes = classes;
+                this.email = email;
+                this.birth = birth;
+            }
+            getCodeStudent() {
+                return this.codeStudent;
+            }
+            setCodeStudent(codeStudent) {
+                this.codeStudent = codeStudent;
+            }
+            getNameStudent() {
+                return this.nameStudent;
+            }
+            setNameStudent() {
+                this.nameStudent = nameStudent;
+            }
+            getClasses() {
+                return this.classes;
+            }
+            setClasses() {
+                this.classes = classes;
+            }
+            getEmail() {
+                return this.email;
+            }
+            setGmail() {
+                this.email = email;
+            }
+            getBirth() {
+                return this.birth;
+            }
+            setBirth() {
+                this.birth = birth;
+            }
+        }
+        let student1 = new Student("HV-01", "Đức Định", "C0123", "dinh@gmail.com", "26/07/2003");
+        let student2 = new Student("HV-02", "Em Khang", "C0123", "khang@gmail.com", "02/05/1998");
+        let student3 = new Student("HV-03", "Hồ Viễn", "C0123", "vien@gmail.com", "22/01/2001");
+        let studentList = [];
+        studentList.push(student1);
+        studentList.push(student2);
+        studentList.push(student3);
+        displayStudentList(studentList);
+        // hien thi
+        function displayStudentList(studentList) {
+            let table = "<table border='1' style='border-collapse: collapse'>";
+            table += "<tr>" +
+                "<th>STT</th>" +
+                "<th>Mã HV</th>" +
+                "<th>Tên</th>" +
+                "<th>Lớp</th>" +
+                "<th>email</th>" +
+                "<th>Ngày sinh</th>" +
+                " </tr>";
+            for (let i = 0; i < studentList.length; i++) {
+                table += "<tr>" +
+                    "<td>" + (i + 1) + "</td>" +
+                    "<td>" + studentList[i].codeStudent + "</td>" +
+                    "<td>" + studentList[i].nameStudent + "</td>" +
+                    "<td>" + studentList[i].classes + "</td>" +
+                    "<td>" + studentList[i].email + "</td>" +
+                    "<td>" + studentList[i].birth + "</td>" +
+                    "<td><button onclick=\"deleteStudent(" + i + ")\">Xoá</button></td>" +
+                    "<td><button onclick=\"updateStudent(" + i + ")\">Sửa</button></td>" +
+                    "</tr>";
+            }
+            table += "</table>";
+            document.getElementById("tableStudentList").innerHTML = table;
+        }
+        // xoa
+        function deleteStudent(indexStudent) {
+            const confirmDelete = confirm("Bạn muốn xoá học sinh " +
+                studentList[indexStudent].nameStudent + " ko?");
+            if (confirmDelete) {
+                studentList.splice(indexStudent, 1);
+                alert("Bạn đã xoá thành công.");
+                displayStudentList(studentList);
+            } else {
+                alert("Bạn đã không xoá.");
+            }
+        }
+        // sua
+        let check;
+        let maHV;
+        function updateStudent(index) {
+            do{
+                maHV= prompt("nhap ma hv");
+                checkCode(maHV,getCodeStudent);
+            }
+            while(check==true)
+            let name=prompt("nhap ten");
+            let classes=prompt("nhap lop");
+            let email=prompt("nhap email");
+            let birth=prompt("nhap ngay sinh");
+            studentList[index]=new Student(maHV,name,classes,email,birth);
+            displayStudentList(studentList);
+            alert("sua thanh cong");
+        }
+        function checkCode(maHV,getCodeStudent){
+            check=true;
+            for(let i=0;i<getCodeStudent.length;i++){
+                if(maHV==getCodeStudent[i]){
+                    check=false;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
