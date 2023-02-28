@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = prompt("Nhập chuỗi kí tự:");
+        let strNew = [];
+        for (let i = 0; i < str.length; i++) {
+            let check = true;
+            for (let j = 0; j < strNew.length; j++) {
+                if (str[i] == strNew[j]) {
+                    check = false;
+                    break;
+                }
+            }
+            if (check) {
+                strNew.push(str[i]);
+            }
+        }
+        document.write("Chuỗi kí tự đầu vào là: " + str);
+        document.write("có " + strNew.length + " kí tự khác nhau là :" + strNew);
+    </script>
+</body>
+
+</html>
