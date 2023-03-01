@@ -8,6 +8,7 @@
 
 <body>
     <h1>Danh sách các học viên</h1>
+    <button type="button" onclick="addStudent()">Them HV</button>
     <div id="tableStudentList"></div>
     <script>
         class Student {
@@ -96,29 +97,60 @@
             }
         }
         // sua
-        let check;
-        let maHV;
         function updateStudent(index) {
-            do{
-                maHV= prompt("nhap ma hv");
-                checkCode(maHV,getCodeStudent);
+            const upS = confirm("ban mua sua hoc sinh " + studentList[index].nameStudent);
+            if (upS) {
+                let check;
+                let maHV;
+                do {
+                    check = true;
+                    maHV = prompt("nhap ma hv");
+                    for (let i = 0; i < studentList.length; i++) {
+                        if (maHV === studentList[i].codeStudent && maHV!==studentList[index].codeStudent) {
+                            check = false;
+                            alert("Ma HV bi trung");
+                        }
+                    }
+
+                } while (check !== true)
+                maHV = maHV;
+                // let maHV = prompt("nhap ma hv");
+                let name = prompt("nhap ten");
+                let classes = prompt("nhap lop");
+                let email = prompt("nhap email");
+                let birth = prompt("nhap ngay sinh");
+                studentList[index] = new Student(maHV, name, classes, email, birth);
+                displayStudentList(studentList);
+                alert("sua thanh cong");
             }
-            while(check==true)
-            let name=prompt("nhap ten");
-            let classes=prompt("nhap lop");
-            let email=prompt("nhap email");
-            let birth=prompt("nhap ngay sinh");
-            studentList[index]=new Student(maHV,name,classes,email,birth);
-            displayStudentList(studentList);
-            alert("sua thanh cong");
+            else {
+                alert("ban k sua nua");
+            }
         }
-        function checkCode(maHV,getCodeStudent){
-            check=true;
-            for(let i=0;i<getCodeStudent.length;i++){
-                if(maHV==getCodeStudent[i]){
-                    check=false;
+        //them
+        function addStudent() {
+            let check;
+            let maHV;
+            do {
+                check = true;
+                maHV = prompt("nhap ma hv");
+                for (let i = 0; i < studentList.length; i++) {
+                    if (maHV === studentList[i].codeStudent) {
+                        check = false;
+                        alert("Ma HV bi trung");
+                    }
                 }
-            }
+
+            } while (check !== true)
+            maHV = maHV;
+            let name = prompt("nhap ten");
+            let classes = prompt("nhap lop");
+            let email = prompt("nhap email");
+            let birth = prompt("nhap ngay sinh");
+            let add = new Student(maHV, name, classes, email, birth);
+            studentList.push(add);
+            alert("them thanh cong");
+            displayStudentList(studentList);
         }
     </script>
 </body>
